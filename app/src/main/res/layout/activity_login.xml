@@ -7,10 +7,11 @@
     tools:context=".LoginActivity">
 
     <TextView
-        android:id="@+id/textViewRegister"
+        android:id="@+id/textViewReg"
         android:layout_width="146dp"
         android:layout_height="65dp"
         android:text="Login"
+        android:gravity="center"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +31,7 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewReg" />
 
     <EditText
         android:id="@+id/editTextPassword"
