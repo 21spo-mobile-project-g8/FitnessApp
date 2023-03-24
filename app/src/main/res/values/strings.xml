@@ -1,12 +1,32 @@
 <resources>
     <string name="app_name">FitnessApp</string>
-    <string name="title_activity_calories">CaloriesActivity</string>
+    <string name="title_activity_calories">Calories</string>
+    <string name="title_activity_exercise">Exercise</string>
+    <string name="title_activity_food">Food</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_steps">Steps</string>
+    <string name="title_activity_tracker">Tracker</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="enter_weight">Enter your weight...</string>
+    <string name="selected_intensity">Selected intensity:</string>
+    <string name="select_intensity">Select your intensity...</string>
+    <string-array name="intensity">
+        <item>Light</item>
+        <item>Usual</item>
+        <item>Moderate</item>
+        <item>Hard</item>
+        <item>Very hard</item>
+        <item>Extreme</item>
+    </string-array>
+    <string name="select_gender">Select your gender...</string>
+    <string name="man">Man</string>
+    <string name="woman">Woman</string>
+    <string name="consumption">Your calorie consumption:</string>
 </resources>
