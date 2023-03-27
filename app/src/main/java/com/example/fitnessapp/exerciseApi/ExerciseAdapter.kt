@@ -1,5 +1,6 @@
 package com.example.fitnessapp.exerciseApi
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,7 +32,10 @@ class ExerciseAdapter(
         return ExerciseViewHolder(binding)
     }
 
-    override fun getItemCount(): Int = exercises.size
+    override fun getItemCount(): Int {
+        Log.d("ExerciseAdapter", "getItemCount(): ${exercises.size}")
+        return exercises.size
+    }
 
     override fun onBindViewHolder(holder: ExerciseViewHolder, position: Int) {
         holder.bindExercise(exercises[position])

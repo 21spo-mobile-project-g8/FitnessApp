@@ -19,9 +19,12 @@ class ExerciseActivity : AppCompatActivity() {
         val rvExercisesList: RecyclerView = findViewById(R.id.rvExercisesList)
 
         rvExercisesList.layoutManager = LinearLayoutManager(this)
+        rvExercisesList.adapter = ExerciseAdapter(emptyList())
         rvExercisesList.setHasFixedSize(true)
+
         getExerciseData { exercises: List<Exercise> ->
             rvExercisesList.adapter = ExerciseAdapter(exercises)
+            rvExercisesList.adapter?.notifyDataSetChanged()
         }
     }
 
