@@ -88,6 +88,7 @@ class CaloriesActivity : AppCompatActivity() {
             2 -> 1.55
             3 -> 1.725
             4 -> 1.9
+            5 -> 2.2
             else -> 1.0
         }
         return bmr * multiplier

@@ -20,7 +20,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
     <string name="selected_intensity">Selected intensity:</string>
-    <string name="select_intensity">Select your intensity...</string>
+    <string name="select_intensity">Select daily activity</string>
     <string-array name="intensity">
         <item>Light</item>
         <item>Usual</item>
@@ -29,7 +29,7 @@
         <item>Very hard</item>
         <item>Extreme</item>
     </string-array>
-    <string name="select_gender">Select your gender...</string>
+    <string name="select_gender">Select gender</string>
     <string name="man">Man</string>
     <string name="woman">Woman</string>
     <string name="consumption">Your calorie consumption:</string>
