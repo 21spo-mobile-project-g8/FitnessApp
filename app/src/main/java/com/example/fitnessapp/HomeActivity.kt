@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.example.fitnessapp.exerciseApi.ExerciseActivity
+import com.example.fitnessapp.api.ExercisesActivity
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +29,7 @@ class HomeActivity : AppCompatActivity() {
 
         var exerciseButton : Button = findViewById(R.id.exerciseButton)
         exerciseButton.setOnClickListener {
-            val intent = Intent(this, ExerciseActivity::class.java).apply{
+            val intent = Intent(this, ExercisesActivity::class.java).apply{
 
             }
             startActivity(intent);

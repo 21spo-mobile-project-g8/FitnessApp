@@ -32,4 +32,6 @@
     <string name="muscle">muscle</string>
     <string name="title">Title</string>
     <string name="tvMuscle">Muscle</string>
+    <string name="Exercises">Exercises</string>
+    <string name="title_activity_exercises">Exercises</string>
 </resources>
