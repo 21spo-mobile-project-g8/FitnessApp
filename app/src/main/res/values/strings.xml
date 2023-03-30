@@ -33,6 +33,12 @@
     <string name="man">Man</string>
     <string name="woman">Woman</string>
     <string name="consumption">Your calorie consumption:</string>
+    <string name="muscle">muscle</string>
+    <string name="title">Title</string>
+    <string name="tvMuscle">Muscle</string>
+    <string name="Exercises">Exercises</string>
+    <string name="title_activity_exercises">Exercises</string>
+    <string name="search_hint">search_hint</string>
     <string name="calculate">Calculate</string>
     <string name="calories">Total Daily Energy Expenditure</string>
 </resources>
