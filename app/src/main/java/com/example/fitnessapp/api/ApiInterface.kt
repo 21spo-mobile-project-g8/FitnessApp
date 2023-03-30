@@ -6,6 +6,6 @@ import retrofit2.http.Headers
 
 interface ApiInterface {
     @Headers("X-Api-Key: " + "W3QAJsTRC9vBQ8Q4PGTi7wKEA4gQNHSOLcCmfDvu")
-    @GET("exercises?muscle=biceps")
+    @GET("exercises?muscle=lats")
     fun getData(): Call<DataModel>
 }

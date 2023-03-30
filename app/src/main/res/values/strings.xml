@@ -34,4 +34,5 @@
     <string name="tvMuscle">Muscle</string>
     <string name="Exercises">Exercises</string>
     <string name="title_activity_exercises">Exercises</string>
+    <string name="search_hint">search_hint</string>
 </resources>
