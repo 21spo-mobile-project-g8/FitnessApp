@@ -5,12 +5,14 @@
     <string name="enter_weight">Enter weight (kg)</string>
 
     <string name="app_name">FitnessApp</string>
+    <string name="title_activity_checker">Checker</string>
     <string name="title_activity_calories">Calories</string>
     <string name="title_activity_exercise">Exercise</string>
     <string name="title_activity_food">Food</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_steps">Steps</string>
     <string name="title_activity_tracker">Tracker</string>
+    <string name="title_activity_calorieshome">Calories Menu</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -33,6 +35,8 @@
     <string name="man">Man</string>
     <string name="woman">Woman</string>
     <string name="consumption">Your calorie consumption:</string>
+    <string name="nutrition">nutrition</string>
+    <string name="tvInfo">calories</string>
     <string name="muscle">muscle</string>
     <string name="title">Title</string>
     <string name="tvMuscle">Muscle</string>
@@ -41,4 +45,6 @@
     <string name="search_hint">search_hint</string>
     <string name="calculate">Calculate</string>
     <string name="calories">Total Daily Energy Expenditure</string>
+    <string name="checker">Check</string>
+    <string name="send_request">Send Request</string>
 </resources>
