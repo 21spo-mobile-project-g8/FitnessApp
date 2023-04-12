@@ -35,9 +35,9 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent);
         }
 
-        var caloriesButton : Button = findViewById(R.id.caloriesButton)
-        caloriesButton.setOnClickListener {
-            val intent = Intent(this, CaloriesActivity::class.java).apply{
+        var calorieshomeButton : Button = findViewById(R.id.caloriesButton)
+        calorieshomeButton.setOnClickListener {
+            val intent = Intent(this, CaloriesHomeActivity::class.java).apply{
 
             }
             startActivity(intent);
