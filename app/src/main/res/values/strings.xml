@@ -41,4 +41,6 @@
     <string name="search_hint">search_hint</string>
     <string name="calculate">Calculate</string>
     <string name="calories">Total Daily Energy Expenditure</string>
+    <string name="search_exercises_by_muscle">Search exercises by muscle...</string>
+    <string name="menubutton">menubutton</string>
 </resources>
