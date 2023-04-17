@@ -7,6 +7,6 @@ import retrofit2.http.Headers
 
 interface ApiInterface {
     @Headers("X-Api-Key: " + "cju/TWZ0lueDYBjujhtdfQ==FJLwtBt15QpYfTbL")
-    @GET("nutrition?query=1lb brisket and fries")
+    @GET("nutrition?query=100g chicken breast")
     fun getData(): Call<Nutrition>
 }

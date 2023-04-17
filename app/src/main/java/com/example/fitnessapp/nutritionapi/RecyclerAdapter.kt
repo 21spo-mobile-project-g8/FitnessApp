@@ -32,10 +32,11 @@ class RecyclerAdapter(val list:ArrayList<NutritionItem>, val context: Context):R
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem=list[position]
 
+
         holder.apply {
             titleTxt.text = currentItem.name
 
-            nutritionTxt.text = currentItem.calories.toString()
+            nutritionTxt.text = currentItem.calories.toString() + " calories"
         }
 
     }
