@@ -36,7 +36,9 @@
     <string name="woman">Woman</string>
     <string name="consumption">Your calorie consumption:</string>
     <string name="nutrition">nutrition</string>
+    <string name="recipe">recipe</string>
     <string name="tvInfo">calories</string>
+    <string name="tvRecipe">Recipes</string>
     <string name="muscle">muscle</string>
     <string name="title">Title</string>
     <string name="tvMuscle">Muscle</string>
