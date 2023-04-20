@@ -17,7 +17,9 @@ import com.example.fitnessapp.R
 
             // Alustetaan TextView-luokan ominaisuudet ViewHolder-luokan näkymässä.
             val titleTxt: TextView =itemView.findViewById(R.id.recipeTitle)
-            val recipeTxt: TextView =itemView.findViewById(R.id.recipeInfo)
+            val servingsTxt: TextView =itemView.findViewById(R.id.servingsInfo)
+            val ingredientsTxt: TextView =itemView.findViewById(R.id.ingredientsInfo)
+            val instructionsTxt: TextView =itemView.findViewById(R.id.instructionsInfo)
         }
 
         // Metodi, joka luo uuden ViewHolder-luokan näkymän.
@@ -42,7 +44,11 @@ import com.example.fitnessapp.R
             holder.apply {
                 titleTxt.text = currentItem.title
 
-                recipeTxt.text = currentItem.ingredients.toString() + " recipes"
+                servingsTxt.text = currentItem.servings.toString() + " recipes"
+
+                ingredientsTxt.text = currentItem.ingredients.toString()
+
+                instructionsTxt.text = currentItem.instructions.toString()
             }
 
         }
