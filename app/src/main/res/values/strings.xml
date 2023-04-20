@@ -46,7 +46,11 @@
     <string name="nutritionCarbohydrates">Carbohydrates</string>
     <string name="nutritionSugar">Sugar</string>
 
-    <string name="tvRecipe">Recipes</string>
+    <string name="tvServings">Servings</string>
+    <string name="tvIngredients">Ingredients</string>
+    <string name="tvInstructions">Instructions</string>
+
+
     <string name="muscle">muscle</string>
     <string name="title">Title</string>
     <string name="tvMuscle">Muscle</string>
