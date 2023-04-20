@@ -38,7 +38,9 @@
     <string name="nutrition">nutrition</string>
     <string name="recipe">recipe</string>
     <string name="tvInfo">calories</string>
-    <string name="tvRecipe">Recipes</string>
+    <string name="tvInstructions">Instructions</string>
+    <string name="tvServings">Servings</string>
+    <string name="tvIngredients">Ingredients</string>
     <string name="muscle">muscle</string>
     <string name="title">Title</string>
     <string name="tvMuscle">Muscle</string>

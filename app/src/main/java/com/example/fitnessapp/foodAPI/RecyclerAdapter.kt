@@ -16,7 +16,11 @@ import com.example.fitnessapp.R
 
             val titleTxt: TextView =itemView.findViewById(R.id.recipeTitle)
 
-            val recipeTxt: TextView =itemView.findViewById(R.id.recipeInfo)
+            val instructionsTxt: TextView =itemView.findViewById(R.id.instructionsInfo)
+
+            val servingsTxt: TextView =itemView.findViewById(R.id.servingsInfo)
+
+            val ingredientsTxt: TextView =itemView.findViewById(R.id.ingredientsInfo)
 
         }
 
@@ -38,7 +42,11 @@ import com.example.fitnessapp.R
             holder.apply {
                 titleTxt.text = currentItem.title
 
-                recipeTxt.text = currentItem.ingredients.toString() + " recipes"
+                instructionsTxt.text = currentItem.instructions.toString() + " recipes"
+
+                servingsTxt.text = currentItem.servings.toString()
+
+                ingredientsTxt.text = currentItem.ingredients.toString()
             }
 
         }
