@@ -37,7 +37,15 @@
     <string name="consumption">Your calorie consumption:</string>
     <string name="nutrition">nutrition</string>
     <string name="recipe">recipe</string>
-    <string name="tvInfo">calories</string>
+
+    <string name="nutritionCalories">Calories</string>
+    <string name="nutritionServingSize">Serving size</string>
+    <string name="nutritionFatTotal">Total fat</string>
+    <string name="nutritionSaturatedFat">Saturated fat</string>
+    <string name="nutritionProtein">Protein</string>
+    <string name="nutritionCarbohydrates">Carbohydrates</string>
+    <string name="nutritionSugar">Sugar</string>
+
     <string name="tvRecipe">Recipes</string>
     <string name="muscle">muscle</string>
     <string name="title">Title</string>
