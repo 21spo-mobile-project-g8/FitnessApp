@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_abdominals"
+            android:title="Abdominals"
+            app:showAsAction="collapseActionView" />
+        <item
+            android:id="@+id/menu_biceps"
+            android:title="Biceps"
+            app:showAsAction="collapseActionView"/>
+        <item
+            android:id="@+id/menu_chest"
+            android:title="Chest"
+            app:showAsAction="collapseActionView"/>
+        <item
+            android:id="@+id/menu_forearms"
+            android:title="Forearms"
+            app:showAsAction="collapseActionView"/>
+        <item
+            android:id="@+id/menu_glutes"
+            android:title="Glutes"
+            app:showAsAction="collapseActionView"/>
+        <item
+            android:id="@+id/menu_hamstrings"
+            android:title="Hamstrings"
+            app:showAsAction="collapseActionView"/>
+        <item
+            android:id="@+id/menu_lats"
+            android:title="Lats"
+            app:showAsAction="collapseActionView"/>
+        <item
+            android:id="@+id/menu_quadriceps"
+            android:title="Quadriceps"
+            app:showAsAction="collapseActionView"/>
+        <item
+            android:id="@+id/menu_traps"
+            android:title="Traps"
+            app:showAsAction="collapseActionView"/>
+        <item
+            android:id="@+id/menu_triceps"
+            android:title="Triceps"
+            app:showAsAction="collapseActionView"/>
+        <!-- Add more items for other muscles as necessary -->
+    </group>
+
+</menu>

@@ -1,0 +1,76 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/muscle_menu"
+        android:title="Select Muscle">
+
+        <menu>
+
+            <item
+                android:id="@+id/abdominals_item"
+                android:title="abdominals" />
+
+            <item
+                android:id="@+id/abductors_item"
+                android:title="abductors" />
+
+            <item
+                android:id="@+id/adductors_item"
+                android:title="adductors" />
+
+            <item
+                android:id="@+id/biceps_item"
+                android:title="biceps" />
+
+            <item
+                android:id="@+id/calves_item"
+                android:title="calves" />
+
+            <item
+                android:id="@+id/chest_item"
+                android:title="chest" />
+
+            <item
+                android:id="@+id/forearms_item"
+                android:title="forearms" />
+
+            <item
+                android:id="@+id/glutes_item"
+                android:title="glutes" />
+
+            <item
+                android:id="@+id/hamstrings_item"
+                android:title="hamstrings" />
+
+            <item
+                android:id="@+id/lats_item"
+                android:title="lats" />
+
+            <item
+                android:id="@+id/lower_back_item"
+                android:title="lower_back" />
+
+            <item
+                android:id="@+id/middle_back_item"
+                android:title="middle_back" />
+
+            <item
+                android:id="@+id/neck_item"
+                android:title="neck" />
+
+            <item
+                android:id="@+id/quadriceps_item"
+                android:title="quadriceps" />
+
+            <item
+                android:id="@+id/traps_item"
+                android:title="traps" />
+
+            <item
+                android:id="@+id/triceps_item"
+                android:title="triceps" />
+
+
+        </menu>
+    </item>
+</menu>
