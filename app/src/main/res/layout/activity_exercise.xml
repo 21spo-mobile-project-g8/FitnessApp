@@ -2,52 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<<<<<<< Updated upstream
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tbMenu"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:layout_marginTop="8dp"
-        android:background="?attr/colorPrimary"
-        app:layout_constraintTop_toBottomOf="@id/textView"
-        app:titleTextColor="@color/white"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
-
-        <ImageButton
-            android:id="@+id/buMenu"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="16dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="@string/menubutton"
-            android:padding="8dp"
-            android:src="@drawable/baseline_list_white_48"
-            app:layout_constraintBottom_toBottomOf="@+id/tbMenu"
-            app:layout_constraintEnd_toEndOf="@+id/tbMenu"
-            app:layout_constraintTop_toTopOf="@+id/tbMenu" />
-
-    </androidx.appcompat.widget.Toolbar>
-
-
-=======
->>>>>>> Stashed changes
-
-    <TextView
+        <TextView
         android:id="@+id/tvSubtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-<<<<<<< Updated upstream
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Exercises"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-=======
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:text="@string/exerciseSubtitle"
@@ -63,19 +22,14 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         android:layout_below="@+id/tvSubtitle"/>
->>>>>>> Stashed changes
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvExercisesList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-<<<<<<< Updated upstream
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tbMenu" />
-=======
         android:layout_below="@+id/tbExercise"/>
->>>>>>> Stashed changes
+
 
 </RelativeLayout>

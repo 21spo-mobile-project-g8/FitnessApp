@@ -58,6 +58,4 @@
     <string name="send_request">Send Request</string>
     <string name="exercises">Exercises</string>
     <string name="exerciseSubtitle">Select a muscle group from the menu</string>
-    <string name="checker">Check</string>
-    <string name="send_request">Send Request</string>
 </resources>
