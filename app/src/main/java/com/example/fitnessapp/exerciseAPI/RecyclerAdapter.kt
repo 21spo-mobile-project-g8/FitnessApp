@@ -50,7 +50,7 @@ class RecyclerAdapter(val list:ArrayList<DataModelItem>, val context: Context, p
             "quadriceps" -> R.drawable.quads
             "traps" -> R.drawable.traps
             "triceps" -> R.drawable.triceps
-            else -> R.drawable.icon_calories // Use a default image if muscle group is not recognized
+            else -> R.drawable.error // Use a default image if muscle group is not recognized
         }
     }
 
