@@ -4,12 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-<<<<<<< Updated upstream
 import com.example.fitnessapp.api.ExercisesActivity
-=======
 import com.example.fitnessapp.exerciseAPI.ExercisesActivity
 import com.example.fitnessapp.foodAPI.FoodActivity
->>>>>>> Stashed changes
+import com.example.fitnessapp.foodAPI.FoodActivity
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,9 +38,9 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent);
         }
 
-        var caloriesButton : Button = findViewById(R.id.caloriesButton)
-        caloriesButton.setOnClickListener {
-            val intent = Intent(this, CaloriesActivity::class.java).apply{
+        var calorieshomeButton : Button = findViewById(R.id.caloriesButton)
+        calorieshomeButton.setOnClickListener {
+            val intent = Intent(this, CaloriesHomeActivity::class.java).apply{
 
             }
             startActivity(intent);

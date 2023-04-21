@@ -17,6 +17,14 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".nutritionapi.CheckerActivity"
+            android:exported="false"
+            android:label="@string/title_activity_checker"/>
+        <activity
+            android:name=".CaloriesHomeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_tracker"/>
+        <activity
             android:name=".TrackerActivity"
             android:exported="false"
             android:label="@string/title_activity_tracker"/>
@@ -25,7 +33,7 @@
             android:exported="false"
             android:label="@string/title_activity_settings" />
         <activity
-            android:name=".FoodActivity"
+            android:name=".foodAPI.FoodActivity"
             android:exported="false"
             android:label="@string/title_activity_food" />
         <activity
