@@ -1,4 +1,4 @@
-package com.example.fitnessapp.api
+package com.example.fitnessapp.exerciseAPI
 
 data class DataModelItem(
     val difficulty: String,

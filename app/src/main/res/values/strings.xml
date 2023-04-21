@@ -41,6 +41,13 @@
     <string name="search_hint">search_hint</string>
     <string name="calculate">Calculate</string>
     <string name="calories">Total Daily Energy Expenditure</string>
+<<<<<<< Updated upstream
     <string name="search_exercises_by_muscle">Search exercises by muscle...</string>
     <string name="menubutton">menubutton</string>
+=======
+    <string name="checker">Check</string>
+    <string name="send_request">Send Request</string>
+    <string name="exercises">Exercises</string>
+    <string name="exerciseSubtitle">Select a muscle group from the menu</string>
+>>>>>>> Stashed changes
 </resources>

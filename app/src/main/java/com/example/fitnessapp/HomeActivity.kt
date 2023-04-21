@@ -4,7 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+<<<<<<< Updated upstream
 import com.example.fitnessapp.api.ExercisesActivity
+=======
+import com.example.fitnessapp.exerciseAPI.ExercisesActivity
+import com.example.fitnessapp.foodAPI.FoodActivity
+>>>>>>> Stashed changes
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+<<<<<<< Updated upstream
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tbMenu"
@@ -32,11 +31,14 @@
     </androidx.appcompat.widget.Toolbar>
 
 
+=======
+>>>>>>> Stashed changes
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvSubtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< Updated upstream
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Exercises"
@@ -45,14 +47,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+=======
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/exerciseSubtitle"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbExercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#6200ED"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:layout_below="@+id/tvSubtitle"/>
+>>>>>>> Stashed changes
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvExercisesList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+<<<<<<< Updated upstream
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tbMenu" />
+=======
+        android:layout_below="@+id/tbExercise"/>
+>>>>>>> Stashed changes
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

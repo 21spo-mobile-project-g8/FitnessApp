@@ -33,11 +33,7 @@
             android:exported="false"
             android:label="@string/title_activity_steps" />
         <activity
-            android:name=".exerciseApi.ExerciseActivity"
-            android:exported="false"
-            android:label="@string/title_activity_exercise" />
-        <activity
-            android:name=".api.ExercisesActivity"
+            android:name=".exerciseAPI.ExercisesActivity"
             android:exported="false"
             android:label="@string/title_activity_exercises"/>
         <activity
