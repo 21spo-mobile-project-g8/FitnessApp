@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitnessapp.R
+
 // Määritellään RecyclerAdapter-luokka, joka perii RecyclerView.Adapter-luokan ominaisuudet ja metodit.
 // Luokan konstruktori vaatii listan ravintoaineista ja kontekstin.
 class RecyclerAdapter(val list:ArrayList<NutritionItem>, val context: Context):RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
@@ -46,7 +47,6 @@ class RecyclerAdapter(val list:ArrayList<NutritionItem>, val context: Context):R
     // Asetetaan ravintoaineen tiedot ViewHolder-luokan näkymään.
         holder.apply {
             titleTxt.text = "Name: " + currentItem.name
-
             caloriesTxt.text = "Calories: " + currentItem.calories.toString() + " kcal"
             servingSizeTxt.text = "Serving size: " + currentItem.serving_size_g.toString() + "g"
             fatTotalTxt.text = "Total fat: " + currentItem.fat_total_g.toString() + "g"

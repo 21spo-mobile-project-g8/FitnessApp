@@ -3,6 +3,8 @@ package com.example.fitnessapp.nutritionapi
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Headers
+import retrofit2.http.Query
+import com.google.gson.JsonArray
 
 //Määritellään rajapintaluokka ApiInterface.
 interface ApiInterface {
@@ -10,8 +12,8 @@ interface ApiInterface {
     @Headers("X-Api-Key: " + "cju/TWZ0lueDYBjujhtdfQ==FJLwtBt15QpYfTbL")
 
     // Määritellään HTTP GET -pyyntö
-    @GET("nutrition?query=100g chicken breast")
+    @GET("nutrition")
 
     // Määritellään rajapinnan funktio getData, joka palauttaa Call-tyyppisen objektin, joka sisältää Nutrition-tyyppisiä tietoja.
-    fun getData(): Call<Nutrition>
+    fun getData(@Query("query") query: String): Call<JsonArray>
 }

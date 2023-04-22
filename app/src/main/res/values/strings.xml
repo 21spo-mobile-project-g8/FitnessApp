@@ -34,13 +34,19 @@
     <string name="consumption">Your calorie consumption:</string>
     <string name="nutrition">nutrition</string>
     <string name="recipe">recipe</string>
-    <string name="nutritionCalories">Calories</string>
-    <string name="nutritionServingSize">Serving size</string>
-    <string name="nutritionFatTotal">Total fat</string>
-    <string name="nutritionSaturatedFat">Saturated fat</string>
-    <string name="nutritionProtein">Protein</string>
-    <string name="nutritionCarbohydrates">Carbohydrates</string>
+
+
     <string name="nutritionSugar">Sugar</string>
+    <string name="nutritionCarbohydrates">Carbohydrates</string>
+    <string name="nutritionProtein">Protein</string>
+    <string name="nutritionSaturatedFat">Saturated Fat</string>
+
+    <string name="nutritionCalories">Calories</string>
+    <string name="nutritionServingSize">Serving Size</string>
+    <string name="nutritionFatTotal">Total Fat</string>
+
+
+
     <string name="tvServings">Servings</string>
     <string name="tvIngredients">Ingredients</string>
     <string name="tvInstructions">Instructions</string>
