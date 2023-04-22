@@ -58,4 +58,8 @@
     <string name="send_request">Send Request</string>
     <string name="exercises">Exercises</string>
     <string name="exerciseSubtitle">Select a muscle group from the menu</string>
+    <string name="tracker">tracker</string>
+    <string name="enter_weighttracker">Enter weight</string>
+    <string name="enter_date_yyyy_mm_dd">Enter date (yyyy-mm-dd)</string>
+    <string name="save">Save</string>
 </resources>
