@@ -10,12 +10,12 @@
         android:id="@+id/twCalories"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="@string/calories"
         android:textColor="@color/red"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

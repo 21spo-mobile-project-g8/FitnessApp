@@ -17,11 +17,11 @@
         android:id="@+id/tbExercise"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSubtitle"
         android:layout_marginTop="8dp"
-        android:background="#6200ED"
+        android:background="@color/red"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        android:layout_below="@+id/tvSubtitle"/>
+        android:theme="?attr/actionBarTheme" />
 
 
     <androidx.recyclerview.widget.RecyclerView
