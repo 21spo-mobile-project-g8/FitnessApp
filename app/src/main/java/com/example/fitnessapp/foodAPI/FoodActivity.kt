@@ -1,11 +1,10 @@
 package com.example.fitnessapp.foodAPI
 
-import android.annotation.SuppressLint
 import android.os.Bundle
+import android.widget.SearchView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.fitnessapp.R
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -14,25 +13,18 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import com.google.gson.Gson
+import com.google.gson.JsonArray
+import com.google.gson.reflect.TypeToken
 
 class FoodActivity : AppCompatActivity() {
 
-    // Haetaan RecyclerView-näkymä ja alustetaan lista
-    lateinit var recyclerView: RecyclerView
-    lateinit var list: ArrayList<FoodItem>
+    lateinit var tvFood: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_food)
 
-        // Haetaan viittaus RecyclerView-näkymään ja luodaan adapteri
-        recyclerView=findViewById(R.id.rvFoodList)
-        list = ArrayList()
-        val adapter = RecyclerAdapter(list, this)
-        recyclerView.adapter=adapter
-
-        // Asetetaan LinearLayoutManager-näkymä RecyclerView:lle
-        val layoutManager = LinearLayoutManager(this)
-        recyclerView.layoutManager = layoutManager
+        tvFood = findViewById(R.id.tvFood)
 
         // Luodaan HttpLoggingInterceptor ja OkHttpClient, jotta voidaan seurata verkkopyyntöjen logeja
         val loggingInterceptor = HttpLoggingInterceptor().apply {
@@ -48,30 +40,43 @@ class FoodActivity : AppCompatActivity() {
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-        val api: ApiInterface =retrofit.create(ApiInterface::class.java)
+        val api: ApiInterface = retrofit.create(ApiInterface::class.java)
 
-        // Käytetään rajapintaa ApiInterfacen avulla ja tehdään verkkopyyntö "getData()"
-        val call: Call<Food> = api.getData()
-        call.enqueue(object: Callback<Food?> {
-            @SuppressLint("NotifyDataSetChanged")
-            override fun onResponse(call: Call<Food?>, response: Response<Food?>) {
-
-                if (response.isSuccessful){
-                    // Tyhjennetään listan sisältö ja lisätään uudet tiedot
-                    list.clear()
-                    for (myData in response.body()!!){
-
-                        list.add(myData)
-                    }
-                    // Päivitetään adapteri uusilla tiedoilla
-                    adapter.notifyDataSetChanged()
-
-                }
-
+        val searchView = findViewById<SearchView>(R.id.svRecipes)
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                fetchRecipeData(api, query)
+                return true
             }
-            // Näytetään Toast-viesti, jos verkkopyyntö epäonnistuu
-            override fun onFailure(call: Call<Food?>, t: Throwable) {
-                Toast.makeText(this@FoodActivity, "Callback error", Toast.LENGTH_SHORT).show()
+
+            override fun onQueryTextChange(newText: String): Boolean {
+                return false
+            }
+        })
+    }
+private fun fetchRecipeData(api: ApiInterface, query: String) {
+    val call: Call<JsonArray> = api.getData(query)
+    call.enqueue(object: Callback<JsonArray> {
+        override fun onResponse(call: Call<JsonArray>, response: Response<JsonArray>) {
+            if (response.isSuccessful) {
+                val jsonArray = response.body()
+                if (jsonArray != null) {
+                    val gson = Gson()
+                    val type = object : TypeToken<List<FoodItem>>() {}.type
+                    val foodItems = gson.fromJson<List<FoodItem>>(jsonArray, type)
+
+                    // Clear the TextView and append the data from the API response
+                    tvFood.text = ""
+                    for (item in foodItems) {
+                        tvFood.append(item.toString())
+                        tvFood.append("\n\n")
+                    }
+                }
+            }
+        }
+        // Näytetään Toast-viesti, jos verkkopyyntö epäonnistuu
+        override fun onFailure(call: Call<JsonArray>, t: Throwable) {
+            Toast.makeText(this@FoodActivity, "Callback error", Toast.LENGTH_SHORT).show()
             }
         })
     }
