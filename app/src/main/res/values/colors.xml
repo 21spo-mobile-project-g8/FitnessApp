@@ -8,6 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FF0000</color>
+    <color name="material_dynamic_neutral_variant30">#FFFFFFFF</color>
+    <color name="design_default_color_background">#FFFFFFFF</color>
+
 
 
     <!-- for Normal/Light Mode -->

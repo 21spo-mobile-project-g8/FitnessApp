@@ -1,11 +1,10 @@
 package com.example.fitnessapp.nutritionapi
 
-import android.annotation.SuppressLint
 import android.os.Bundle
+import android.widget.SearchView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.fitnessapp.R
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -14,31 +13,21 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-
-
+import com.google.gson.Gson
+import com.google.gson.JsonArray
+import com.google.gson.reflect.TypeToken
 
 class CheckerActivity : AppCompatActivity() {
 
-    // Haetaan RecyclerView-näkymä ja alustetaan lista
-    lateinit var recyclerView: RecyclerView
-    lateinit var list: ArrayList<NutritionItem>
+    lateinit var tvData: TextView
 
-    // Haetaan viittaus RecyclerView-näkymään ja luodaan adapteri
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_checker)
 
-        // Haetaan viittaus RecyclerView-näkymään ja luodaan adapteri
-        recyclerView=findViewById(R.id.rvCaloriesList)
-        list = ArrayList()
-        val adapter = RecyclerAdapter(list, this)
-        recyclerView.adapter=adapter
+        tvData = findViewById(R.id.tvData)
 
-        // Asetetaan LinearLayoutManager-näkymä RecyclerView:lle
-        val layoutManager = LinearLayoutManager(this)
-        recyclerView.layoutManager = layoutManager
-
-        // Luodaan HttpLoggingInterceptor ja OkHttpClient, jotta voidaan seurata verkkopyyntöjen logeja
+        // Create HttpLoggingInterceptor and OkHttpClient for logging network requests
         val loggingInterceptor = HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.BODY
         }
@@ -46,35 +35,49 @@ class CheckerActivity : AppCompatActivity() {
             .addInterceptor(loggingInterceptor)
             .build()
 
-        // Luodaan Retrofit-olio, joka käyttää rajapintaa ApiInterface
-        val retrofit:Retrofit= Retrofit.Builder()
+        // Create Retrofit instance using ApiInterface
+        val retrofit: Retrofit = Retrofit.Builder()
             .baseUrl("https://api.api-ninjas.com/v1/")
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-        val api: ApiInterface =retrofit.create(ApiInterface::class.java)
+        val api: ApiInterface = retrofit.create(ApiInterface::class.java)
 
-        // Käytetään rajapintaa ApiInterfacen avulla ja tehdään verkkopyyntö "getData()"
-        val call: Call<Nutrition> = api.getData()
-        call.enqueue(object: Callback<Nutrition?>{
-            @SuppressLint("NotifyDataSetChanged")
-            override fun onResponse(call: Call<Nutrition?>, response: Response<Nutrition?>) {
+        val searchView = findViewById<SearchView>(R.id.svCalories)
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                fetchNutritionData(api, query)
+                return true
+            }
 
-                if (response.isSuccessful){
-                    // Tyhjennetään listan sisältö ja lisätään uudet tiedot
-                    list.clear()
-                    for (myData in response.body()!!){
-                        list.add(myData)
+            override fun onQueryTextChange(newText: String): Boolean {
+                return false
+            }
+        })
+    }
+
+    private fun fetchNutritionData(api: ApiInterface, query: String) {
+        val call: Call<JsonArray> = api.getData(query)
+        call.enqueue(object : Callback<JsonArray> {
+            override fun onResponse(call: Call<JsonArray>, response: Response<JsonArray>) {
+                if (response.isSuccessful) {
+                    val jsonArray = response.body()
+                    if (jsonArray != null) {
+                        val gson = Gson()
+                        val type = object : TypeToken<List<NutritionItem>>() {}.type
+                        val nutritionItems = gson.fromJson<List<NutritionItem>>(jsonArray, type)
+
+                        // Clear the TextView and append the data from the API response
+                        tvData.text = ""
+                        for (item in nutritionItems) {
+                            tvData.append(item.toString())
+                            tvData.append("\n\n")
+                        }
                     }
-
-                    // Päivitetään adapteri uusilla tiedoilla
-                    adapter.notifyDataSetChanged()
-
                 }
             }
 
-            // Näytetään Toast-viesti, jos verkkopyyntö epäonnistuu
-            override fun onFailure(call: Call<Nutrition?>, t: Throwable) {
+            override fun onFailure(call: Call<JsonArray>, t: Throwable) {
                 Toast.makeText(this@CheckerActivity, "Callback error", Toast.LENGTH_SHORT).show()
             }
         })
