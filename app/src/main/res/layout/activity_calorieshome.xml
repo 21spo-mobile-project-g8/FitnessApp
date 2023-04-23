@@ -25,6 +25,7 @@
         android:backgroundTint="@color/red"
         android:drawableLeft="@drawable/icon_calories"
         android:text="Consuption Calculator"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -37,6 +38,7 @@
         android:backgroundTint="@color/red"
         android:drawableLeft="@drawable/icon_calories"
         android:text="Calories Checker"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/caloriesButton" />
