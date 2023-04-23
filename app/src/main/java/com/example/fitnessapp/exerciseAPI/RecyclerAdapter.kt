@@ -14,9 +14,8 @@ class RecyclerAdapter(val list:ArrayList<DataModelItem>, val context: Context, p
     class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
 
         val titleTxt: TextView =itemView.findViewById(R.id.exerciseTitle)
-
         val muscleTxt: TextView =itemView.findViewById(R.id.exerciseMuscle)
-
+        val infoTxt: TextView =itemView.findViewById(R.id.exerciseInfo)
         val exerciseImage: ImageView = itemView.findViewById(R.id.exercisePoster)
 
     }
@@ -37,6 +36,7 @@ class RecyclerAdapter(val list:ArrayList<DataModelItem>, val context: Context, p
         holder.apply {
             titleTxt.text = currentItem.name
             muscleTxt.text = currentItem.muscle
+            infoTxt.text = currentItem.instructions
             exerciseImage.setImageResource(getMuscleImage(currentItem.muscle))
         }
     }

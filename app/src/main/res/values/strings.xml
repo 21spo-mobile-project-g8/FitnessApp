@@ -68,4 +68,5 @@
     <string name="enter_weighttracker">Enter weight</string>
     <string name="enter_date_yyyy_mm_dd">Enter date (yyyy-mm-dd)</string>
     <string name="save">Save</string>
+    <string name="info">Info</string>
 </resources>
