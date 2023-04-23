@@ -12,17 +12,14 @@ import com.example.fitnessapp.R
 class RecyclerAdapter(val list:ArrayList<DataModelItem>, val context: Context, private val muscle: String):RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
-
         val titleTxt: TextView =itemView.findViewById(R.id.exerciseTitle)
         val muscleTxt: TextView =itemView.findViewById(R.id.exerciseMuscle)
         val infoTxt: TextView =itemView.findViewById(R.id.exerciseInfo)
         val exerciseImage: ImageView = itemView.findViewById(R.id.exercisePoster)
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.exercise_item, parent, false)
-
         return ViewHolder(view)
     }
 
@@ -32,7 +29,6 @@ class RecyclerAdapter(val list:ArrayList<DataModelItem>, val context: Context, p
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem=list[position]
-
         holder.apply {
             titleTxt.text = currentItem.name
             muscleTxt.text = currentItem.muscle
@@ -47,7 +43,7 @@ class RecyclerAdapter(val list:ArrayList<DataModelItem>, val context: Context, p
             "biceps" -> R.drawable.biceps
             "chest" -> R.drawable.chest
             "forearms" -> R.drawable.forearms
-            "biceps" -> R.drawable.biceps
+            "glutes" -> R.drawable.glutes
             "hamstrings" -> R.drawable.hamstrings
             "lats" -> R.drawable.lats
             "quadriceps" -> R.drawable.quads
@@ -56,5 +52,4 @@ class RecyclerAdapter(val list:ArrayList<DataModelItem>, val context: Context, p
             else -> R.drawable.error // Use a default image if muscle group is not recognized
         }
     }
-
 }
