@@ -16,15 +16,16 @@ import retrofit2.converter.gson.GsonConverterFactory
 import com.google.gson.Gson
 import com.google.gson.JsonArray
 import com.google.gson.reflect.TypeToken
+import android.widget.ExpandableListView
 
 class FoodActivity : AppCompatActivity() {
 
-    lateinit var tvFood: TextView
+    lateinit var elvFood: ExpandableListView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_food)
 
-        tvFood = findViewById(R.id.tvFood)
+        elvFood = findViewById(R.id.elvFood)
 
         // Luodaan HttpLoggingInterceptor ja OkHttpClient, jotta voidaan seurata verkkopyyntöjen logeja
         val loggingInterceptor = HttpLoggingInterceptor().apply {
@@ -65,12 +66,8 @@ private fun fetchRecipeData(api: ApiInterface, query: String) {
                     val type = object : TypeToken<List<FoodItem>>() {}.type
                     val foodItems = gson.fromJson<List<FoodItem>>(jsonArray, type)
 
-                    // Clear the TextView and append the data from the API response
-                    tvFood.text = ""
-                    for (item in foodItems) {
-                        tvFood.append(item.toString())
-                        tvFood.append("\n\n")
-                    }
+                    val adapter = FoodExpandableListAdapter(this@FoodActivity, foodItems)
+                    elvFood.setAdapter(adapter)
                 }
             }
         }
