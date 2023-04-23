@@ -45,6 +45,9 @@ class RecyclerAdapter(val list:ArrayList<DataModelItem>, val context: Context, p
         return when (muscle) {
             "abdominals" -> R.drawable.abs
             "biceps" -> R.drawable.biceps
+            "chest" -> R.drawable.chest
+            "forearms" -> R.drawable.forearms
+            "biceps" -> R.drawable.biceps
             "hamstrings" -> R.drawable.hamstrings
             "lats" -> R.drawable.lats
             "quadriceps" -> R.drawable.quads
